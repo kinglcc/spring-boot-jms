@@ -1,0 +1,18 @@
+language: java
+sudo: false
+
+jdk:
+  - oraclejdk7
+
+notifications:
+  email: false
+
+branches:
+  only:
+    - master
+
+script:
+  - mvn test
+
+after_success:
+  - mvn clean package
